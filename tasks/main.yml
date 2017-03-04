@@ -1,4 +1,13 @@
 ---
 - name: Ensure Java is installed.
-  yum: name={{ item }} state=installed
+  yum:
+    name: "{{ item }}"
+    state: installed
   with_items: "{{ java_packages }}"
+  when: ansible_os_family == 'RedHat'
+
+- name: Ensure Java is installed from homebrew.
+  homebrew_cask:
+    name: java
+    state: present
+  when: ansible_os_family == 'Darwin'

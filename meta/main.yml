@@ -7,7 +7,10 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-      - all
+        - all
+    - name: MacOSX
+      versions:
+        - all
   galaxy_tags: []
 
 dependencies: []

@@ -1,0 +1,5 @@
+---
+- name: Ensure Java is installed from homebrew.
+  homebrew_cask:
+    name: java
+    state: present

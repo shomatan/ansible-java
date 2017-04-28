@@ -1,4 +1,4 @@
-Ansible role: Java
+Ansible Role: OpenJDK
 =========
 
 Installs java.
@@ -11,13 +11,12 @@ None.
 Role Variables
 --------------
 
-    java_packages:
-      - java-1.8.0-openjdk
+None.
 
 Dependencies
 ------------
 
-None
+None.
 
 Example Playbook
 ----------------

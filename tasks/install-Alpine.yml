@@ -1,0 +1,10 @@
+---
+- name: Ensure Java is installed from apk.
+  apk:
+    name: openjdk8
+    update_cache: yes
+    state: installed
+
+- name: Purge apk cache.
+  command: rm -rf /var/cache/apk/*
+  when: ansible_connection == 'docker'

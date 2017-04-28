@@ -1,0 +1,9 @@
+---
+- name: Ensure Java is installed from yum.
+  yum:
+    name: java-1.8.0-openjdk
+    state: installed
+
+- name: Purge yum cache.
+  command: yum clean all
+  when: ansible_connection == 'docker'
